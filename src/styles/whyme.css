@@ -1,0 +1,62 @@
+/* ============================================================
+   Why Me? Section
+   Premium text panel with highlighted phrases.
+   ============================================================ */
+
+.whyme-panel {
+  position: relative;
+  background: linear-gradient(135deg, var(--bg-1), var(--bg));
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 56px 52px;
+  overflow: hidden;
+}
+
+/* Red glow at top of panel */
+.whyme-panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 100% at 50% 0%, var(--red-glow-subtle), transparent 70%);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.whyme-panel > * {
+  position: relative;
+  z-index: 1;
+}
+
+.whyme-text {
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--text-secondary);
+  max-width: 780px;
+}
+
+.whyme-text p {
+  margin-bottom: var(--space-lg);
+}
+
+.whyme-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Decorative red line at left of panel */
+.whyme-panel::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 40px;
+  bottom: 40px;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, var(--red), transparent);
+  z-index: 1;
+}
+
+/* CTA area at bottom */
+.whyme-cta {
+  margin-top: var(--space-lg);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--line);
+}

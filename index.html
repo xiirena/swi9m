@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>swi9m — Minecraft Portfolio</title>
+  <meta name="description" content="swi9m's personal Minecraft portfolio — PvP, building, Skript, plugins, commands, and server management." />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+  <!-- Google Fonts — preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body>
+
+  <!-- ===================== LOADING SCREEN ===================== -->
+  <div id="loading-screen" class="loading-screen" aria-hidden="true">
+    <div class="loading-name">swi9m</div>
+    <div class="loading-tagline">Minecraft Portfolio</div>
+  </div>
+
+  <!-- ===================== HEADER / NAV ===================== -->
+  <header class="site-header">
+    <div class="wrap nav">
+      <a href="#hero" class="logo" aria-label="swi9m — home">
+        swi<span class="logo-accent">9</span>m
+      </a>
+      <nav class="nav-social" id="nav-social" aria-label="Social links">
+        <!-- Social buttons injected by JS from siteConfig -->
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===================== MAIN CONTENT ===================== -->
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section id="hero" class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-glow anim-pulse-glow"></div>
+      <div class="wrap hero-inner">
+
+        <!-- Left: Minecraft Character -->
+        <div class="hero-character hero-anim-4">
+          <div class="hero-username">
+            swi<span class="accent">9</span>m
+          </div>
+          <div class="hero-skin-wrapper anim-float">
+            <div class="hero-skin-glow"></div>
+            <img
+              id="minecraft-skin"
+              src="https://mc-heads.net/body/swi9m/256"
+              alt="swi9m's Minecraft character"
+              loading="eager"
+            />
+          </div>
+        </div>
+
+        <!-- Right: About Me -->
+        <div class="hero-about hero-anim-2">
+          <div class="section-head">
+            <div class="eyebrow">Introduction</div>
+            <h2>About Me</h2>
+          </div>
+          <div class="about-card glass-card" id="about-card">
+            <!-- Content injected by JS — shows placeholder if empty -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== EXPERIENCE ===== -->
+    <section id="experience" class="section-alt">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">Skills & Knowledge</div>
+          <h2>My Experience</h2>
+        </div>
+
+        <div class="experience-content">
+          <div class="experience-panel reveal glass-card" id="experience-panel">
+            <!-- Text injected by JS -->
+          </div>
+
+          <div class="skills-grid reveal" id="skills-grid" data-delay="200">
+            <!-- Skill badges injected by JS from siteConfig.experienceSkills -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SMPs ===== -->
+    <section id="smps">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">Servers & Projects</div>
+          <h2>SMPs</h2>
+        </div>
+
+        <div class="smps-grid" id="smps-grid">
+          <!-- SMP cards injected by JS from siteConfig.smpCards -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WHY ME? ===== -->
+    <section id="why-me" class="section-alt">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="eyebrow">About This Player</div>
+          <h2>Why me?</h2>
+        </div>
+
+        <div class="whyme-panel reveal glass-card" id="whyme-panel">
+          <!-- Text injected by JS -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-logo">
+        swi<span class="logo-accent">9</span>m
+      </div>
+      <div class="footer-tagline">Minecraft Portfolio</div>
+      <div class="footer-social" id="footer-social">
+        <!-- Social buttons injected by JS -->
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-copy">&copy; 2026 swi9m. All rights reserved.</div>
+    </div>
+  </footer>
+
+</body>
+</html>

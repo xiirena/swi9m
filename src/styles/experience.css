@@ -1,0 +1,45 @@
+/* ============================================================
+   Experience Section
+   Text panel + skill badges grid.
+   ============================================================ */
+
+.experience-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+}
+
+/* Speech-bubble-inspired panel */
+.experience-panel {
+  position: relative;
+  background: var(--bg-1);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 40px 44px;
+  font-size: 16px;
+  line-height: 1.85;
+  color: var(--text-secondary);
+}
+
+/* Red accent top border */
+.experience-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 32px;
+  right: 32px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--red), transparent);
+  border-radius: 1px;
+}
+
+.experience-panel p + p {
+  margin-top: var(--space-md);
+}
+
+/* Skill badges container */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}

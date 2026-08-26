@@ -1,0 +1,140 @@
+/* ============================================================
+   Animations
+   All keyframes and reusable animation utility classes.
+   ============================================================ */
+
+/* --- Keyframes --- */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.7;
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1.06);
+  }
+}
+
+@keyframes glitchFlicker {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  12% { opacity: 0.3; }
+  14% { opacity: 1; }
+  30% { opacity: 1; transform: translateX(0); }
+  32% { opacity: 0.8; transform: translateX(-3px); }
+  34% { opacity: 1; transform: translateX(2px); }
+  36% { opacity: 1; transform: translateX(0); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes borderGlow {
+  0%, 100% { box-shadow: 0 0 8px -2px var(--red-glow); }
+  50% { box-shadow: 0 0 20px -2px var(--red-glow); }
+}
+
+@keyframes subtlePulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+/* --- Scroll Reveal --- */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity var(--duration-slow) var(--ease-out),
+    transform var(--duration-slow) var(--ease-out);
+}
+
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered delays — applied via data-delay attribute or inline style */
+
+/* --- Hero entrance animations --- */
+.hero-anim-1 { animation: fadeUp 0.9s var(--ease-out) 0.1s both; }
+.hero-anim-2 { animation: fadeUp 0.9s var(--ease-out) 0.25s both; }
+.hero-anim-3 { animation: fadeUp 0.9s var(--ease-out) 0.4s both; }
+.hero-anim-4 { animation: scaleIn 0.7s var(--ease-out) 0.15s both; }
+
+/* --- Utility animations --- */
+.anim-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.anim-pulse-glow {
+  animation: pulseGlow 6s ease-in-out infinite;
+}
+
+.anim-subtle-pulse {
+  animation: subtlePulse 3s ease-in-out infinite;
+}
+
+/* --- Reduced motion --- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
